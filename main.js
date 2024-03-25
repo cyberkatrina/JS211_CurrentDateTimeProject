@@ -1,4 +1,4 @@
-// **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!!
+// **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work in 421 and you need to brush up on your HTML elements**
 
 
 // ***************************
@@ -9,18 +9,24 @@ console.log(new Date)
 
 const displayDate = () => {
   const currentDate = new Date()
-
-  document.getElementById("display-element").innerHTML = currentDate;
+  document.getElementById("display-date").innerHTML = currentDate
 }
  
-
 // Write a JavaScript program to convert a number to a string.
-
-
+const numToStr = () => {
+  const number = parseInt(document.getElementById("number").value)
+  console.log(typeof number)
+  document.getElementById("display-string").innerHTML = typeof number.toString()
+  console.log(typeof document.getElementById("display-string").innerHTML)
+}
 
 // Write a JavaScript program to convert a string to the number.
-
-
+const strToNum = () => {
+  const text = document.getElementById("text").value
+  console.log(typeof text)
+  document.getElementById("display-number").innerHTML = typeof parseInt(text)
+  console.log(typeof parseInt(text))
+}
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -29,23 +35,47 @@ const displayDate = () => {
   // * Number
   // * NaN
   // * String
-// NOTE: Exlclude this function while completing Part II. The Data Type will always return as a String. If you want a challenge, come back to this function and start in the console. Then see what you can make of it. Again, simply skip this function while completing Part II of this project.
-  
+const typeOf = (input) => {
+  console.log(typeof input)
+}
 
-  
 // Write a JavaScript program that adds 2 numbers together.
-
-
+const addNums = () => {
+  const num1 = parseInt(document.getElementById("num1").value)
+  const num2 = parseInt(document.getElementById("num2").value)
+  const sum = num1 + num2
+  document.getElementById("display-sum").innerHTML = sum
+}
 
 // Write a JavaScript program that runs only when 2 things are true.
-
-
+const bothTrue = () => {
+  if (document.getElementById("true1").checked && document.getElementById("true2").checked) {
+    document.getElementById("display-both").innerHTML = "Both True"
+  }
+  else {
+    document.getElementById("display-both").innerHTML = ""
+  }
+}
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-
-
+const oneTrue = () => {
+  if (document.getElementById("true3").checked || document.getElementById("true4").checked) {
+    document.getElementById("display-one").innerHTML = "One is True"
+  }
+  else {
+    document.getElementById("display-one").innerHTML = ""
+  }
+}
 
 // Write a JavaScript program that runs when both things are not true.  
+const bothNotTrue = () => {
+  if (!document.getElementById("true5").checked && !document.getElementById("true6").checked) {
+    document.getElementById("display-neither").innerHTML = "Both Not True"
+  }
+  else {
+    document.getElementById("display-neither").innerHTML = ""
+  }
+}
 
 // ***************************
 //         PART TWO

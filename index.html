@@ -3,13 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
   </head>
   <body>
     <h1>Hello World!</h1>
     <hr/>
-    <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
-    <hr/>
+    <button onclick="displayDate()">Current Date</button>
+    <div id="display-date"></div>
+    <br><hr>
+    <input id="number" type="number">
+    <button onclick="numToStr()">Number to String</button>
+    <div id="display-string"></div>
+    <br><hr>
+    <input id="text" type="number">
+    <button onclick="strToNum()">String to Number</button>
+    <div id="display-number"></div>
+    <br><hr>
+    Which DataType? Open the console and assign you desired input to the variable "input", like so: input = ____
+    <button onclick="typeOf(input)">Click when Done</button>
+    <br><hr>
+    <input id="num1" type="number"> <input id="num2" type="number">
+    <button onclick="addNums()">Add Together</button>
+    <div id="display-sum"></div>
+    <br><hr>
+    <input type="radio" name="first" id="true1" onchange="bothTrue()"> True <input type="radio" name="first" id="false1" onchange="bothTrue()"> False
+    <br>
+    <input type="radio" name="second" id="true2" onchange="bothTrue()">True <input type="radio" name="second" id="false2" onchange="bothTrue()"> False
+    <br><br>
+    <div id="display-both"></div>
+    <br><hr>
+    <input type="radio" name="third" id="true3" onchange="oneTrue()">True <input type="radio" name="third" id="false3" onchange="oneTrue()"> False
+    <br>
+    <input type="radio" name="fourth" id="true4" onchange="oneTrue()">True <input type="radio" name="fourth" id="false4" onchange="oneTrue()"> False
+    <br><br>
+    <div id="display-one"></div>
+    <br><hr>
+    <input type="radio" name="fifth" id="true5" onchange="bothNotTrue()">True <input type="radio" name="fifth" id="false5" onchange="bothNotTrue()"> False
+    <br>
+    <input type="radio" name="sixth" id="true6" onchange="bothNotTrue()">True <input type="radio" name="sixth" id="false6" onchange="bothNotTrue()"> False
+    <br><br>
+    <div id="display-neither"></div>
   </body>
 </html>
